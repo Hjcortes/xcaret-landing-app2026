@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Altura del corte diagonal entre secciones (más pronunciado en móvil) */
+:root {
+  --diag: 12vw;
+}
+@media (min-width: 768px) {
+  :root {
+    --diag: 7vw;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-body text-xcaret-ink antialiased overflow-x-hidden;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display leading-[1.1];
+  }
+  p {
+    @apply mb-4 leading-normal;
+  }
+}
+
+/*
+  Lo único que se queda en CSS "puro": los cortes diagonales (clip-path con variable).
+  Se aplican a la capa de fondo de <Section />, no al contenido.
+*/
+@layer components {
+  .diag-both {
+    clip-path: polygon(0 0, 100% var(--diag), 100% 100%, 0 calc(100% - var(--diag)));
+  }
+  .diag-top {
+    clip-path: polygon(0 0, 100% var(--diag), 100% 100%, 0 100%);
+  }
+  .diag-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--diag)));
+  }
+}
+
+/* Respeta la preferencia del sistema: sin movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
