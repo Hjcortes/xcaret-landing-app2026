@@ -40,13 +40,13 @@ export default function Hero() {
         <motion.img
           src="/images/cloud-left.png"
           alt=""
-          className="pointer-events-none absolute -left-[8%] top-[5%] -z-10 w-[36%] md:w-[22%]"
+          className="pointer-events-none absolute -left-[44%] top-[25%] -z-10 w-[36%] md:w-[42%]"
           style={reduce ? undefined : { x: cloudL }}
         />
         <motion.img
           src="/images/cloud-right.png"
           alt=""
-          className="pointer-events-none absolute -right-[6%] -top-[2%] -z-10 w-[36%] md:w-[22%]"
+          className="pointer-events-none absolute -right-[24%] -top-[-50%] md:-top-[2%] -z-10 w-[36%] md:w-[38%]"
           style={reduce ? undefined : { x: cloudR }}
         />
 
@@ -67,18 +67,18 @@ export default function Hero() {
           </div>
 
           <motion.div
-            className="md:-mr-[max(1.25rem,calc((100vw-1100px)/2+1.25rem))]"
-            initial={reduce ? false : { opacity: 0, y: 80, rotate: 8 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          >
-            <motion.img
-              src="/images/hero-phone-hand.png"
-              alt="App Xcaret en un celular"
-              className="mx-auto block w-full max-w-[420px] md:ml-auto md:mr-0 md:max-w-[920px]"
-              style={reduce ? undefined : { y: phoneY, rotate: phoneRotate }}
-            />
-          </motion.div>
+  className="-mr-5 md:-mr-[max(1.25rem,calc((100vw-1100px)/2+1.25rem))]"
+  initial={reduce ? false : { opacity: 0, y: 80, rotate: 8 }}
+  animate={{ opacity: 1, y: 0, rotate: 0 }}
+  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+>
+  <motion.img
+    src="/images/hero-phone-hand.png"
+    alt="App Xcaret en un celular"
+    className="ml-auto block w-full max-w-[420px] md:max-w-[920px]"
+    style={reduce ? undefined : { y: phoneY, rotate: phoneRotate }}
+  />
+</motion.div>
         </div>
 
         <FloatIn

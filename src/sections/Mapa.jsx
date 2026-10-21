@@ -39,7 +39,7 @@ export default function Mapa() {
         <motion.img
           src="/images/pin-location.png"
           alt=""
-          className="absolute bottom-[14%] left-[8%] w-12 md:left-[22%] md:w-[70px]"
+          className="absolute bottom-[14%] left-[8%] w-12 md:left-[22%] md:w-[800px]"
           style={reduce ? undefined : { y: pinY, opacity: pinOpacity }}
         />
 
