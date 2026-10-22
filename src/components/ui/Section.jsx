@@ -53,7 +53,7 @@ export default function Section({
     <section
       ref={ref}
       id={id}
-      className={`relative isolate ${v.text} ${d.margin} ${
+      className={`relative isolate ${v.text} ${d.z} ${d.margin} ${
         padded ? "py-[calc(var(--diag)+3rem)]" : ""
       } ${className}`}
     >
@@ -77,7 +77,7 @@ export default function Section({
         {bg?.overlay && <div className={`absolute inset-0 ${bg.overlay}`} />}
       </div>
 
-      <div className={`relative mx-auto max-w-site px-5 ${innerClassName}`}>{children}</div>
+      <div className={`relative mx-auto max-w-screen-xl px-5 ${innerClassName}`}>{children}</div>
     </section>
   );
 }

@@ -27,13 +27,13 @@ export default function Hero() {
       bg={backgrounds.hero}
       padded={false}
       fluid
-      className="pt-12 pb-[calc(var(--diag)+2rem)]"
+      className="pt-12 min-h-[90vh]"
     >
       <div ref={ref} className="relative">
         <Reveal as="h1" direction="down" className="text-center text-[clamp(2rem,6vw,3.4rem)] font-extrabold">
           {hero.title}
         </Reveal>
-        <Reveal as="p" delay={0.1} className="mt-1.5 text-center font-semibold">
+        <Reveal as="p" delay={0.1} className="mt-1.5 text-center font-semibold text-xl">
           {hero.subtitle}
         </Reveal>
 
@@ -52,7 +52,7 @@ export default function Hero() {
 
         <div className="mt-10 grid grid-cols-1 items-center gap-8 text-center md:grid-cols-2 md:text-left">
           <div>
-            <Reveal as="p" direction="right" className="text-[1.1rem] font-extrabold">
+            <Reveal as="h3" direction="right" className="text-2xl font-bold pb-4">
               {hero.lead}
             </Reveal>
             <Reveal as="p" direction="right" delay={0.1}>

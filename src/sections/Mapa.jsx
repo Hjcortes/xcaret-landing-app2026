@@ -28,35 +28,51 @@ export default function Mapa() {
       <div ref={ref} className="relative">
         <SectionHeader tag={mapa.tag} title={mapa.title} subtitle={mapa.subtitle} light />
 
-        <ParallaxImage
-          src="/images/mapa-phones.png"
-          alt="Mapa interactivo del parque en la App Xcaret"
-          className="mx-auto block w-[85%] max-w-[560px]"
-          speed={50}
-          rotate={2}
-        />
+  {/* Escenario a todo el ancho. Desde md todo se coloca en % y escala como el diseño */}
+        <div className="relative left-1/2 w-screen max-w-[1920px] -translate-x-1/2 md:aspect-[8/3]">
+  {/* Teléfonos */}
+          <div className="mx-auto w-[80%] max-w-[420px] md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:w-[42%] md:max-w-none">
+            <ParallaxImage
+              src="/images/mapa-phones.png"
+              alt="Mapa interactivo del parque en la App Xcaret"
+              className="block w-full"
+              speed={50}
+              rotate={2}
+            />
+          </div>
 
-        <motion.img
-          src="/images/pin-location.png"
-          alt=""
-          className="absolute bottom-[14%] left-[8%] w-12 md:left-[22%] md:w-[800px]"
-          style={reduce ? undefined : { y: pinY, opacity: pinOpacity }}
-        />
+          {/* Pin (incluye la curva) */}
+          <motion.img
+            src="/images/pin-location.png"
+            alt=""
+            className="mx-auto mt-6 block w-[80%] md:absolute md:left-[27%] md:top-[24%] md:mx-0 md:mt-0 md:w-[40%]"
+            style={reduce ? undefined : { y: pinY, opacity: pinOpacity }}
+          />
 
-        <Reveal direction="left" className="mt-8 text-center md:ml-auto md:max-w-[360px] md:text-left">
-          <h3 className="mb-2 text-[1.1rem] font-extrabold">{mapa.lead}</h3>
-          <p>{mapa.body}</p>
-        </Reveal>
+          {/* Párrafo: derecha, bajo los teléfonos, alineado a la derecha */}
+          <Reveal
+            direction="left"
+            className="mt-6 px-5 text-center md:absolute md:right-[22%] md:top-[84%] md:mt-0 md:w-[28%] md:px-0 md:text-right md:text-[clamp(0.875rem,1.07vw,1.28rem)]"
+          >
+            <h3 className="mb-2 text-xl font-bold">{mapa.lead}</h3>
+            <p>{mapa.body}</p>
+          </Reveal>
 
-        <Reveal as="p" delay={0.2} className="mt-6 text-center font-bold md:text-left">
-          {mapa.closing}
-        </Reveal>
+          {/* Frase: centrada bajo el pin */}
+          <Reveal
+            as="p"
+            delay={0.2}
+            className="mt-6 px-5 text-center text-lg font-bold [text-shadow:0_2px_8px_rgba(0,0,0,0.7)] md:absolute md:inset-x-0 md:top-[114%] md:mt-0 md:px-0 md:text-[clamp(1rem,1.2vw,1.44rem)]"
+          >
+            {mapa.closing}
+          </Reveal>
 
-        <FloatIn
-          src="/images/flamingo-right.png"
-          from="right"
-          className="absolute -right-2.5 bottom-[6%] w-[90px] md:-right-8 md:w-[150px]"
-        />
+          <FloatIn
+            src="/images/flamingo-right.png"
+            from="right"
+            className="absolute top-[65%] right-[-2%] w-[90px] md:w-[40%]"
+          />
+        </div>
       </div>
     </Section>
   );
