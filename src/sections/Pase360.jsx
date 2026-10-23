@@ -33,7 +33,7 @@ export default function Pase360() {
           <ParallaxImage
             src="/images/pase360-screens.png"
             alt="Pase 360 en la App Xcaret"
-            className="block w-[90%] max-w-[560px]"
+            className="block w-[90%] max-w-[860px]"
             speed={30}
           />
           <motion.img

@@ -10,38 +10,40 @@ export default function Actividades() {
 
   return (
     <Section className="min-h-[80vh]" id="actividades" variant="coral" diagonal="both" bg={backgrounds.actividades}>
-      <SectionHeader
-        tag={actividades.tag}
-        title={actividades.title}
-        subtitle={actividades.subtitle}
-        light
-      />
+  <SectionHeader
+    tag={actividades.tag}
+    title={actividades.title}
+    subtitle={actividades.subtitle}
+    light
+  />
 
-      <div className="relative grid grid-cols-1 items-center gap-8 text-center md:grid-cols-[1fr_1.2fr] md:text-left">
-        <FloatIn
-          src="/images/flamingo-left.png"
-          from="left"
-          float={12}
-          className="absolute -left-10 -top-16 z-0 w-[120px] md:-left-[80%] md:-top-5 md:w-[720px]"
+  <div className="relative left-1/2 w-screen max-w-[1920px] -translate-x-1/2">
+    <FloatIn
+      src="/images/flamingo-left.png"
+      from="left"
+      float={12}
+      className="absolute -left-10 -top-16 z-0 w-[120px] md:-left-[20%] md:top-0 md:w-[36%]"
+    />
+
+    <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 text-center md:grid-cols-[1fr_1.2fr] md:pl-[24%] md:pr-[6%] md:text-left">
+      <Reveal direction="right">
+        <h3 className="mb-2.5 py-4 text-2xl font-bold">{actividades.lead}</h3>
+        <p className="py-4">{actividades.body}</p>
+      </Reveal>
+
+      <Reveal direction="left">
+        <ParallaxImage
+          src="/images/actividades-screens.png"
+          alt="Actividades disponibles en la App Xcaret"
+          className="mx-auto block w-full md:min-w-[820px]"
+          speed={30}
+          rotate={1.5}
         />
-          <Reveal direction="right">
-            <h3 className="mb-2.5 text-2xl font-bold py-4 relative z-10">{actividades.lead}</h3>
-            <p className="py-4 relative z-10">{actividades.body}</p>
-          </Reveal>
-        
+      </Reveal>
+    </div>
+  </div>
 
-        <Reveal direction="left">
-          <ParallaxImage
-            src="/images/actividades-screens.png"
-            alt="Actividades disponibles en la App Xcaret"
-            className="mx-auto block w-full min-w-[820px]"
-            speed={30}
-            rotate={1.5}
-          />
-        </Reveal>
-      </div>
-
-      <Closing className="text-white">{actividades.closing}</Closing>
-    </Section>
+  <Closing className="text-white">{actividades.closing}</Closing>
+</Section>
   );
 }

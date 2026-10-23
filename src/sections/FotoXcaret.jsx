@@ -18,12 +18,12 @@ export default function FotoXcaret() {
           <motion.img
             src="/images/icon-camera.svg"
             alt=""
-            className="mx-auto mb-4 w-16 md:mx-0"
+            className="mx-auto mb-8 w-24 md:mx-0"
             whileInView={reduce ? undefined : { scale: [1, 1.15, 1] }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           />
-          <h3 className="mb-2 font-extrabold">{fotos.lead}</h3>
+          <h3 className="mb-2 text-2xl font-bold">{fotos.lead}</h3>
           <p>{fotos.body}</p>
         </Reveal>
 
@@ -36,18 +36,18 @@ export default function FotoXcaret() {
             rotate={3}
           />
           <FloatIn
-            src="/images/like-bubble.png"
+            src="/images/heart-bubble.png"
             from="top"
             delay={0.3}
-            float={14}
-            className="absolute -top-[4%] right-[8%] w-[70px]"
+            float={44}
+            className="absolute -top-[-67%] right-[18%] w-[110px]"
           />
           <FloatIn
-            src="/images/like-bubble.png"
+            src="/images/surprised-bubble.png"
             from="bottom"
             delay={0.5}
-            float={10}
-            className="absolute bottom-[4%] left-[14%] w-[90px]"
+            float={24}
+            className="absolute bottom-[34%] left-[18%] w-[100px]"
           />
         </div>
       </div>

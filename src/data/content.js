@@ -68,7 +68,7 @@ export const content = {
   favoritos: {
     tag: "Favoritos",
     title: "¿Viste actividades que te gustaría mucho hacer?",
-    subtitle: "Haz clic en el ♥ para agregarlas a tu lista.",
+    subtitle: "Haz clic en el <span class='text-pink-500 text-2xl'>♥</span> para agregarlas a tu lista.",
     body: "Encuentra los puntos de Favoritos dentro del parque y utiliza la App para descubrir dónde están y llegar más rápido.",
     closing: "No dejes de visitar lo que más te gusta.",
   },

@@ -31,9 +31,18 @@ export default function Mapa() {
   {/* Escenario a todo el ancho. Desde md todo se coloca en % y escala como el diseño */}
         <div className="relative left-1/2 w-screen max-w-[1920px] -translate-x-1/2 md:aspect-[8/3]">
   {/* Teléfonos */}
-          <div className="mx-auto w-[80%] max-w-[420px] md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:w-[42%] md:max-w-none">
+          <div className="mx-auto w-[80%] max-w-[420px] md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:w-[42%] md:max-w-none hidden md:block">
             <ParallaxImage
               src="/images/mapa-phones.png"
+              alt="Mapa interactivo del parque en la App Xcaret"
+              className="block w-full"
+              speed={50}
+              rotate={2}
+            />
+          </div>
+          <div className="mx-auto w-full  md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:max-w-none block md:hidden">
+            <ParallaxImage
+              src="/images/mapa-phones-mb.png"
               alt="Mapa interactivo del parque en la App Xcaret"
               className="block w-full"
               speed={50}
@@ -45,7 +54,7 @@ export default function Mapa() {
           <motion.img
             src="/images/pin-location.png"
             alt=""
-            className="mx-auto mt-6 block w-[80%] md:absolute md:left-[27%] md:top-[24%] md:mx-0 md:mt-0 md:w-[40%]"
+            className="mx-auto mt-6 w-[80%] md:absolute md:left-[27%] md:top-[24%] md:mx-0 md:mt-0 md:w-[40%] hidden md:block"
             style={reduce ? undefined : { y: pinY, opacity: pinOpacity }}
           />
 
@@ -62,7 +71,7 @@ export default function Mapa() {
           <Reveal
             as="p"
             delay={0.2}
-            className="mt-6 px-5 text-center text-lg font-bold [text-shadow:0_2px_8px_rgba(0,0,0,0.7)] md:absolute md:inset-x-0 md:top-[114%] md:mt-0 md:px-0 md:text-[clamp(1rem,1.2vw,1.44rem)]"
+            className="relative z-10 mt-6 px-5 text-center text-lg font-bold [text-shadow:0_2px_8px_rgba(0,0,0,0.7)] md:absolute md:inset-x-0 md:top-[114%] md:mt-0 md:px-0 md:text-[clamp(1rem,1.2vw,1.44rem)]"
           >
             {mapa.closing}
           </Reveal>
@@ -70,7 +79,7 @@ export default function Mapa() {
           <FloatIn
             src="/images/flamingo-right.png"
             from="right"
-            className="absolute top-[65%] right-[-2%] w-[90px] md:w-[40%]"
+            className="absolute z-0 top-[85%] right-[-2%] w-[80%] md:top-[65%] md:right-[-2%] md:w-[40%]"
           />
         </div>
       </div>

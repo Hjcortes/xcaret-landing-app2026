@@ -37,7 +37,7 @@ export default function Pasaporte() {
             src="/images/pasaporte-book.png"
             alt="Pasaporte Xcaret"
             loading="lazy"
-            className="mx-auto block w-full max-w-[420px] drop-shadow-[0_24px_30px_rgba(0,0,0,0.3)]"
+            className="mx-auto block w-full max-w-[620px] drop-shadow-[0_24px_30px_rgba(0,0,0,0.3)]"
           />
         </motion.div>
       </div>

@@ -40,6 +40,7 @@ function Heart({ h, index, reduce }) {
   );
 }
 
+
 export default function Favoritos() {
   const { favoritos } = content;
   const reduce = useReducedMotion();
@@ -56,12 +57,12 @@ export default function Favoritos() {
         <Heart key={i} h={h} index={i} reduce={reduce} />
       ))}
 
-      <SectionHeader tag={favoritos.tag} title={favoritos.title} subtitle={favoritos.subtitle} />
+      <SectionHeader tag={favoritos.tag} title={favoritos.title} subtitleHtml={favoritos.subtitle} />
 
       <ParallaxImage
         src="/images/favoritos-phones.png"
         alt="Lista de favoritos en la App Xcaret"
-        className="relative z-[1] mx-auto block w-[80%] max-w-[460px]"
+        className="relative z-[1] mx-auto block w-[80%] max-w-[960px]"
         speed={30}
         rotate={1.5}
       />
