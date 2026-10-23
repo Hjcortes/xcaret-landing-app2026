@@ -5,6 +5,7 @@ import { Reveal } from "../components/animations";
 import Section from "../components/ui/Section.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
 import Closing from "../components/ui/Closing.jsx";
+import { assetUrl } from "../utils/assets.js";
 
 export default function Pasaporte() {
   const { pasaporte } = content;
@@ -17,7 +18,7 @@ export default function Pasaporte() {
       <div className="grid grid-cols-1 items-center gap-8 text-center md:grid-cols-2 md:text-left">
         <Reveal direction="right">
           <img
-            src="/images/icon-passport-stamp.svg"
+            src={assetUrl("images/icon-passport-stamp.svg")}
             alt=""
             className="mx-auto mb-4 w-[72px] md:mx-0"
           />
@@ -34,7 +35,7 @@ export default function Pasaporte() {
           whileHover={reduce ? undefined : { rotateZ: -2, scale: 1.03 }}
         >
           <img
-            src="/images/pasaporte-book.png"
+            src={assetUrl("images/pasaporte-book.png")}
             alt="Pasaporte Xcaret"
             loading="lazy"
             className="mx-auto block w-full max-w-[620px] drop-shadow-[0_24px_30px_rgba(0,0,0,0.3)]"

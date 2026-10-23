@@ -4,6 +4,7 @@ import { backgrounds } from "../data/backgrounds.js";
 import { Reveal, FloatIn, ParallaxImage } from "../components/animations";
 import Section from "../components/ui/Section.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
+import { assetUrl } from "../utils/assets.js";
 
 export default function FotoXcaret() {
   const { fotos } = content;
@@ -16,7 +17,7 @@ export default function FotoXcaret() {
       <div className="grid grid-cols-1 items-center gap-8 text-center md:grid-cols-[1fr_1.2fr] md:text-left">
         <Reveal direction="right">
           <motion.img
-            src="/images/icon-camera.svg"
+            src={assetUrl("images/icon-camera.svg")}
             alt=""
             className="mx-auto mb-8 w-24 md:mx-0"
             whileInView={reduce ? undefined : { scale: [1, 1.15, 1] }}
@@ -29,21 +30,21 @@ export default function FotoXcaret() {
 
         <div className="relative">
           <ParallaxImage
-            src="/images/fotos-collage.png"
+            src={assetUrl("images/fotos-collage.png")}
             alt="Fotos del parque disponibles en la App"
             className="block w-full"
             speed={40}
             rotate={3}
           />
           <FloatIn
-            src="/images/heart-bubble.png"
+            src={assetUrl("images/heart-bubble.png")}
             from="top"
             delay={0.3}
             float={44}
             className="absolute -top-[-67%] right-[18%] w-[110px]"
           />
           <FloatIn
-            src="/images/surprised-bubble.png"
+            src={assetUrl("images/surprised-bubble.png")}
             from="bottom"
             delay={0.5}
             float={24}

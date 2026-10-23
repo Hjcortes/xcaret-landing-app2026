@@ -1,3 +1,5 @@
+import { assetUrl } from "../utils/assets.js";
+
 /**
  * Fondos opcionales por sección. Para poner una imagen de fondo basta con
  * completar `image` con una ruta de /public/images (o una URL).
@@ -21,7 +23,7 @@ export const backgrounds = {
     parallax: false,
   },
   mapa: {
-    image: "/images/mapa-bg-jungle.jpg",
+    image: assetUrl("images/mapa-bg-jungle.jpg"),
     position: "center",
     size: "cover",
     overlay: "bg-black/10",

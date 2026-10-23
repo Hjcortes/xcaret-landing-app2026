@@ -5,6 +5,7 @@ import { backgrounds } from "../data/backgrounds.js";
 import { Reveal, FloatIn } from "../components/animations";
 import Section from "../components/ui/Section.jsx";
 import StoreButtons from "../components/ui/StoreButtons.jsx";
+import { assetUrl } from "../utils/assets.js";
 
 export default function Hero() {
   const { hero } = content;
@@ -38,13 +39,13 @@ export default function Hero() {
         </Reveal>
 
         <motion.img
-          src="/images/cloud-left.png"
+          src={assetUrl("images/cloud-left.png")}
           alt=""
           className="pointer-events-none absolute -left-[44%] top-[25%] -z-10 w-[36%] md:w-[42%]"
           style={reduce ? undefined : { x: cloudL }}
         />
         <motion.img
-          src="/images/cloud-right.png"
+          src={assetUrl("images/cloud-right.png")}
           alt=""
           className="pointer-events-none absolute -right-[24%] -top-[-50%] md:-top-[2%] -z-10 w-[36%] md:w-[38%]"
           style={reduce ? undefined : { x: cloudR }}
@@ -73,7 +74,7 @@ export default function Hero() {
   transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
 >
   <motion.img
-    src="/images/hero-phone-hand.png"
+    src={assetUrl("images/hero-phone-hand.png")}
     alt="App Xcaret en un celular"
     className="ml-auto block w-full max-w-[420px] md:max-w-[920px]"
     style={reduce ? undefined : { y: phoneY, rotate: phoneRotate }}
@@ -82,7 +83,7 @@ export default function Hero() {
         </div>
 
         <FloatIn
-          src="/images/macaw-small.png"
+          src={assetUrl("images/macaw-small.png")}
           from="right"
           float={8}
           className="absolute -bottom-10 right-0 w-[90px] md:w-[140px]"

@@ -5,6 +5,7 @@ import { backgrounds } from "../data/backgrounds.js";
 import { Reveal, ParallaxImage, FloatIn } from "../components/animations";
 import Section from "../components/ui/Section.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
+import { assetUrl } from "../utils/assets.js";
 
 export default function Mapa() {
   const { mapa } = content;
@@ -33,7 +34,7 @@ export default function Mapa() {
   {/* Teléfonos */}
           <div className="mx-auto w-[80%] max-w-[420px] md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:w-[42%] md:max-w-none hidden md:block">
             <ParallaxImage
-              src="/images/mapa-phones.png"
+              src={assetUrl("images/mapa-phones.png")}
               alt="Mapa interactivo del parque en la App Xcaret"
               className="block w-full"
               speed={50}
@@ -42,7 +43,7 @@ export default function Mapa() {
           </div>
           <div className="mx-auto w-full  md:absolute md:left-[54%] md:bottom-2 md:mx-0 md:max-w-none block md:hidden">
             <ParallaxImage
-              src="/images/mapa-phones-mb.png"
+              src={assetUrl("images/mapa-phones-mb.png")}
               alt="Mapa interactivo del parque en la App Xcaret"
               className="block w-full"
               speed={50}
@@ -52,7 +53,7 @@ export default function Mapa() {
 
           {/* Pin (incluye la curva) */}
           <motion.img
-            src="/images/pin-location.png"
+            src={assetUrl("images/pin-location.png")}
             alt=""
             className="mx-auto mt-6 w-[80%] md:absolute md:left-[27%] md:top-[24%] md:mx-0 md:mt-0 md:w-[40%] hidden md:block"
             style={reduce ? undefined : { y: pinY, opacity: pinOpacity }}
@@ -77,7 +78,7 @@ export default function Mapa() {
           </Reveal>
 
           <FloatIn
-            src="/images/flamingo-right.png"
+            src={assetUrl("images/flamingo-right.png")}
             from="right"
             className="absolute z-0 top-[85%] right-[-2%] w-[80%] md:top-[65%] md:right-[-2%] md:w-[40%]"
           />

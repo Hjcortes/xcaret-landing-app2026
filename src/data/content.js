@@ -1,16 +1,17 @@
 // Todo el copy de la landing en un solo lugar (fácil de editar o traducir).
 // Las rutas de imagen apuntan a /public/images — ver README para la lista de assets.
+import { assetUrl } from "../utils/assets.js";
 
 export const STORES = {
   google: {
     label: "Disponible en Google Play",
     href: "#", // TODO: URL real de Google Play
-    img: "/images/badge-google-play.svg",
+    img: assetUrl("images/badge-google-play.svg"),
   },
   apple: {
     label: "Descárgala en el App Store",
     href: "#", // TODO: URL real de App Store
-    img: "/images/badge-app-store.svg",
+    img: assetUrl("images/badge-app-store.svg"),
   },
 };
 

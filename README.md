@@ -10,6 +10,17 @@ npm run build    # producción (carpeta dist/)
 
 Funciona con Node 18, 20 y 22 en adelante (incluye 24).
 
+## Despliegue en GitHub Pages
+
+El flujo de `.github/workflows/deploy.yml` publica automáticamente la rama `main`
+en GitHub Pages. En el repositorio, configura **Settings → Pages → Build and
+deployment → Source** como **GitHub Actions**. También puedes ejecutar el flujo
+manualmente desde la pestaña **Actions** con **Run workflow**.
+
+Vite usa la ruta `/xcaret-landing-app2026/` durante el despliegue y `/` en local.
+Las imágenes de `public/` usan `assetUrl()` para resolver su dirección correcta
+en ambos entornos.
+
 ## Estilos
 
 - **Tailwind 3** para casi todo (clases en el JSX). La paleta está en `tailwind.config.js` como `xcaret-*` (`bg-xcaret-coral`, `text-xcaret-ink`, etc.) y es aproximada: ajustarla con el Figma.
