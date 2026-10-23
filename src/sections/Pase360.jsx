@@ -32,13 +32,13 @@ export default function Pase360() {
 
         <div className="relative grid place-items-center">
           <ParallaxImage
-            src={assetUrl("images/pase360-screens.png")}
+            src={assetUrl("/images/pase360-screens.png")}
             alt="Pase 360 en la App Xcaret"
             className="block w-[90%] max-w-[860px]"
             speed={30}
           />
           <motion.img
-            src={assetUrl("images/macaw-flying.png")}
+            src={assetUrl("/images/macaw-flying.png")}
             alt=""
             className="pointer-events-none absolute bottom-0 left-0 w-[60%] max-w-[520px]"
             style={reduce ? undefined : { x: macawX, y: macawY, rotate: macawRotate }}

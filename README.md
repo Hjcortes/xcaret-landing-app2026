@@ -34,7 +34,7 @@ Edita `src/data/backgrounds.js`. Cada sección tiene:
 
 ```js
 mapa: {
-  image: "/images/mapa-bg-jungle.jpg", // o null para no usar imagen
+  image: "//images/mapa-bg-jungle.jpg", // o null para no usar imagen
   position: "center",                  // background-position
   size: "cover",                       // cover | contain | auto
   overlay: "bg-black/10",              // clase Tailwind para oscurecer/aclarar
@@ -86,7 +86,7 @@ src/
 
 Todo respeta `prefers-reduced-motion`.
 
-## Assets a exportar (carpeta `public/images/`)
+## Assets a exportar (carpeta `public//images/`)
 
 PNG/WebP con fondo transparente (2x), SVG para íconos y badges.
 

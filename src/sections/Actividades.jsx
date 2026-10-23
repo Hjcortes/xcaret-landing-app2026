@@ -20,7 +20,7 @@ export default function Actividades() {
 
   <div className="relative left-1/2 w-screen max-w-[1920px] -translate-x-1/2">
     <FloatIn
-      src={assetUrl("images/flamingo-left.png")}
+      src={assetUrl("/images/flamingo-left.png")}
       from="left"
       float={12}
       className="absolute -left-10 -top-16 z-0 w-[120px] md:-left-[20%] md:top-0 md:w-[36%]"
@@ -34,7 +34,7 @@ export default function Actividades() {
 
       <Reveal direction="left">
         <ParallaxImage
-          src={assetUrl("images/actividades-screens.png")}
+          src={assetUrl("/images/actividades-screens.png")}
           alt="Actividades disponibles en la App Xcaret"
           className="mx-auto block w-full md:min-w-[820px]"
           speed={30}

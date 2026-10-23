@@ -15,7 +15,7 @@ import { assetUrl } from "../utils/assets.js";
  */
 export const backgrounds = {
   hero: {
-    image: null, // ej. "/images/bg-hero.jpg"
+    image: null, // ej. "//images/bg-hero.jpg"
     position: "center",
     size: "cover",
     overlay: null,
@@ -23,7 +23,7 @@ export const backgrounds = {
     parallax: false,
   },
   mapa: {
-    image: assetUrl("images/mapa-bg-jungle.jpg"),
+    image: assetUrl("/images/mapa-bg-jungle.jpg"),
     position: "center",
     size: "cover",
     overlay: "bg-black/10",

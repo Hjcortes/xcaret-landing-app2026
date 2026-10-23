@@ -22,7 +22,7 @@ export default function Promociones() {
       <div className="grid grid-cols-1 items-center gap-8 text-center md:grid-cols-[1.1fr_1fr] md:text-left">
         <div className="relative">
           <ParallaxImage
-            src={assetUrl("images/promo-phone.png")}
+            src={assetUrl("/images/promo-phone.png")}
             alt="Promociones en la App Xcaret"
             className="mx-auto block max-w-full lg:max-w-[800px]"
             speed={30}
@@ -30,7 +30,7 @@ export default function Promociones() {
           />
           {/* Tarjeta flotante de notificación: entra desde la derecha con un pequeño pop */}
           {/* <motion.img
-            src={assetUrl("images/promo-notification.png")}
+            src={assetUrl("/images/promo-notification.png")}
             alt="Notificación: ahora hasta 15% en parques"
             className="absolute right-0 top-[12%] w-[70%] drop-shadow-xl md:-right-[4%] md:w-[62%]"
             initial={reduce ? false : { opacity: 0, x: 80, scale: 0.9 }}
@@ -42,7 +42,7 @@ export default function Promociones() {
 
         <Reveal direction="left" className="md:text-right">
           <motion.img
-            src={assetUrl("images/icon-store.svg")}
+            src={assetUrl("/images/icon-store.svg")}
             alt=""
             className="mx-auto mb-4 w-24 md:ml-auto md:mr-0"
             whileInView={reduce ? undefined : { rotate: [0, -8, 8, 0] }}

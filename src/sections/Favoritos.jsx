@@ -30,7 +30,7 @@ function Heart({ h, index, reduce }) {
       transition={{ type: "spring", delay: index * 0.12 }}
     >
       <motion.img
-        src={assetUrl("images/heart-3d.png")}
+        src={assetUrl("/images/heart-3d.png")}
         alt=""
         className="w-full"
         style={{ filter: h.blur ? `blur(${h.blur}px)` : undefined }}
@@ -61,7 +61,7 @@ export default function Favoritos() {
       <SectionHeader tag={favoritos.tag} title={favoritos.title} subtitleHtml={favoritos.subtitle} />
 
       <ParallaxImage
-        src={assetUrl("images/favoritos-phones.png")}
+        src={assetUrl("/images/favoritos-phones.png")}
         alt="Lista de favoritos en la App Xcaret"
         className="relative z-[1] mx-auto block w-[80%] max-w-[960px]"
         speed={30}

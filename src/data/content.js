@@ -6,12 +6,12 @@ export const STORES = {
   google: {
     label: "Disponible en Google Play",
     href: "#", // TODO: URL real de Google Play
-    img: assetUrl("images/badge-google-play.svg"),
+    img: assetUrl("/images/badge-google-play.svg"),
   },
   apple: {
     label: "Descárgala en el App Store",
     href: "#", // TODO: URL real de App Store
-    img: assetUrl("images/badge-app-store.svg"),
+    img: assetUrl("/images/badge-app-store.svg"),
   },
 };
 
