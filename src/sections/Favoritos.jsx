@@ -22,7 +22,7 @@ function Heart({ h, index, reduce }) {
     // Capa externa: entrada al hacer scroll. Capa interna: flotación en loop.
     <motion.div
       aria-hidden="true"
-      className="pointer-events-none absolute z-0"
+      className="pointer-events-none absolute z-[1]"
       style={{ top: h.top, left: h.left, right: h.right, width: h.size }}
       initial={reduce ? false : { opacity: 0, scale: 0.4 }}
       whileInView={{ opacity: 1, scale: 1 }}
@@ -68,10 +68,10 @@ export default function Favoritos() {
         rotate={1.5}
       />
 
-      <Reveal as="p" delay={0.1} className="relative z-[1] mx-auto mt-8 max-w-[520px] text-center">
+      <Reveal as="p" delay={0.1} className="relative z-10 mx-auto mt-8 max-w-[520px] text-center">
         {favoritos.body}
       </Reveal>
-      <Closing delay={0.2} className="relative z-[1]">
+      <Closing delay={0.2} className="relative z-10">
         {favoritos.closing}
       </Closing>
     </Section>

@@ -3,7 +3,7 @@ import { Reveal } from "../animations";
 export default function SectionHeader({ tag, title, subtitle, subtitleHtml, align = "center", light = false }) {
   return (
     <header
-      className={`mb-10 ${align === "left" ? "text-left" : "text-center"} ${
+      className={`relative z-10 mb-10 ${align === "left" ? "text-left" : "text-center"} ${
         light ? "text-white" : ""
       }`}
     >
