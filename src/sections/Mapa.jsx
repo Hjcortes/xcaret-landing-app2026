@@ -76,7 +76,7 @@ export default function Mapa() {
           >
             {mapa.closing}
           </Reveal>
-
+            
           <FloatIn
             src={assetUrl("/images/flamingo-right.png")}
             from="right"

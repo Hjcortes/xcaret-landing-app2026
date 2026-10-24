@@ -8,7 +8,7 @@ export default function SectionHeader({ tag, title, subtitle, subtitleHtml, alig
       }`}
     >
       {tag && (
-        <span className="my-4 block text-[0.7rem] uppercase tracking-[0.08em] opacity-60">
+        <span className="my-8 block text-[0.7rem] uppercase tracking-[0.08em] opacity-60">
           {tag}
         </span>
       )}
