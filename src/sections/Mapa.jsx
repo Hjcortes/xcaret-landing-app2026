@@ -80,7 +80,7 @@ export default function Mapa() {
           <FloatIn
             src={assetUrl("/images/flamingo-right.png")}
             from="right"
-            className="absolute z-0 top-[85%] right-[-2%] w-[80%] md:top-[65%] md:right-[-2%] md:w-[40%]"
+            className="absolute z-0 top-[90%] right-[-2%] w-[80%] md:top-[70%] md:right-[-2%] md:w-[40%]"
           />
         </div>
       </div>
