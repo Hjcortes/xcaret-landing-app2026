@@ -23,7 +23,7 @@ export default function Actividades() {
       src={assetUrl("/images/flamingo-left.png")}
       from="left"
       float={12}
-      className="absolute -left-10 -top-16 z-0 w-[120px] md:-left-[20%] md:top-0 md:w-[36%]"
+      className="absolute -left-[70%] -top-16 z-0 w-[100%] md:-left-[20%] md:top-0 md:w-[36%]"
     />
 
     <div className="relative z-10 grid grid-cols-1 items-center gap-8 px-5 text-center md:grid-cols-[1fr_1.2fr] md:pl-[24%] md:pr-[6%] md:text-left">
@@ -36,7 +36,7 @@ export default function Actividades() {
         <ParallaxImage
           src={assetUrl("/images/actividades-screens.png")}
           alt="Actividades disponibles en la App Xcaret"
-          className="mx-auto block w-full md:min-w-[820px]"
+          className="mx-auto block w-full sm:w-[320px] md:w-[10/12] xl:min-w-[720px]"
           speed={30}
           rotate={1.5}
         />
