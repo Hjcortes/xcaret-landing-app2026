@@ -34,7 +34,7 @@ export default function Hero() {
         <Reveal as="h1" direction="down" className="text-center text-[clamp(2rem,6vw,3.4rem)] font-extrabold">
           {hero.title}
         </Reveal>
-        <Reveal as="p" delay={0.1} className="mt-1.5 text-center font-semibold text-xl">
+        <Reveal as="h2" delay={0.1} className="mt-1.5 text-center font-semibold text-xl">
           {hero.subtitle}
         </Reveal>
 

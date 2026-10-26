@@ -17,7 +17,7 @@ export default function SectionHeader({ tag, title, subtitle, subtitleHtml, alig
       </Reveal>
       {(subtitle || subtitleHtml) && (
     <Reveal
-      as="p"
+      as="h3"
       className="mt-2.5 text-[clamp(1rem,2.2vw,1.25rem)]"
       delay={0.1}
       {...(subtitleHtml ? { dangerouslySetInnerHTML: { __html: subtitleHtml } } : {})}
